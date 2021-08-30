@@ -61,3 +61,8 @@ Android APK：https://housesigma.com/static/housesigma-2.13.0-prd.apk
 - 如果不是内存泄漏怎么办？
 *结合自己曾经解决的案例说明。
 
+
+---
+### 面试问题6
+如何在web前端项目实现A，B测试？
+- 包括但不限于：项目部署，设置衡量指标，观察统计结果。
