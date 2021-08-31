@@ -66,3 +66,14 @@ Android APK：https://housesigma.com/static/housesigma-2.13.0-prd.apk
 ### 面试问题6
 如何在web前端项目实现A，B测试？
 - 包括但不限于：项目部署，设置衡量指标，观察统计结果。
+
+
+---
+### 面试问题7 - Angular
+7.1 简述Angular组件的⽣命周期
+
+7.2 简述Angular⾮⽗⼦组件的通信⽅式
+
+7.3 rxjs有哪三种observers( 或者有哪三种消息 )
+
+7.4 简述rxjs: switchMap, concatMap, mergeMap区别
