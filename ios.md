@@ -68,6 +68,7 @@ Android APK：https://housesigma.com/static/housesigma-2.13.0-prd.apk
 ---
 ### 面试问题7 - 原生/H5 混合开发
 > 请下载安装我们的app
+
 目前我们的app是用原生webview壳套在一个 angular app 上面。iOS有几个问题：
 - 有的页面性能不好，JS 地图刷新率低不够流畅。
 - 由于加载的图片和js组件较多，在某些iphone手机上也会发生内存不足的情况。会闪退。
