@@ -90,8 +90,8 @@ Android APK：https://housesigma.com/static/housesigma-2.13.0-prd.apk
 ### 面试问题8
 很多信息类的APP都有夜间和白天阅读模式。我们的用户主要的使用时间也集中在夜间。如何实现像【知乎app】那样，可以让用户切换阅读模式？
 - Auto（跟随系统设置）
-- 白天
-- 夜间
+- 白天 （不跟随系统设置）
+- 夜间 （不跟随系统设置）
 
 #### 8.1 补充问题：
 - 如果app里面用了webview，如何让 webview 的昼夜状态跟随app的3种状态？
