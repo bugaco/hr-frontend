@@ -96,9 +96,9 @@ Android APK：https://housesigma.com/static/housesigma-2.13.0-prd.apk
 #### 8.1 补充问题：
 - 如果app里面用了webview，如何让 webview 的昼夜状态跟随app的3种状态？
 
-webview测试范例页面 https://test.housesigma.com/static/dark_test.html
+webview测试范例页面（不可修改html内容） https://test.housesigma.com/static/dark_test.html
 
 - 答案格式：
-  - 代码片段
+  - 上传代码片段
   - 解释原理，对应的文档链接
-  - 真机调试通过
+  - 自己真机调试通过
