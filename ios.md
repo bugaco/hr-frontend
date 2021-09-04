@@ -83,7 +83,7 @@ Android APK：https://housesigma.com/static/housesigma-2.13.0-prd.apk
 - 没有明确的预算限制，可以是几个礼拜的小项目，也可以是几个月的大项目
 - 答案格式：
   - 相似功能的代码片段
-  - 解释原理，对应的文档
+  - 解释原理，对应的文档链接
 
 
 ---
@@ -100,5 +100,5 @@ webview测试范例页面 https://test.housesigma.com/static/dark_test.html
 
 - 答案格式：
   - 代码片段
-  - 解释原理，对应的文档
+  - 解释原理，对应的文档链接
   - 真机调试通过
