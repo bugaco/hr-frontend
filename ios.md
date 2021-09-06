@@ -76,3 +76,109 @@ webview测试范例页面（不修改html内容是否可实现？） https://tes
   - 上传代码片段
   - 解释原理，对应的文档链接
   - 自己真机调试通过
+
+
+
+这三种模式，取决于keyWindow的`overrideUserInterfaceStyle`属性。
+
+默认为跟随系统，也可以进行手动切换（参考如下）：
+
+```swift
+    private var window: UIWindow? {
+        UIApplication.shared.keyWindow
+    }
+    
+    @IBAction func auto(_ sender: Any) {
+        window?.overrideUserInterfaceStyle = .unspecified
+    }
+    
+    @IBAction func darkTheme(_ sender: Any) {
+        window?.overrideUserInterfaceStyle = .dark
+    }
+    
+    @IBAction func lightTheme(_ sender: Any) {
+        window?.overrideUserInterfaceStyle = .light
+    }
+```
+
+
+
+#### 8.1 补充问题：
+
+- 如果app里面用了webview，如何让 webview 的昼夜状态跟随app的3种状态？
+
+webview测试范例页面（不修改html内容是否可实现？） https://test.housesigma.com/static/dark_test.html
+
+- 答案格式：
+  - 上传代码片段
+  - 解释原理，对应的文档链接
+  - 自己真机调试通过
+
+
+
+##### **答：**
+
+测试页面（https://test.housesigma.com/static/dark_test.html），不修改任何内容，即可实现跟随App的主题状态自动切换。
+
+###### （1）代码片段
+
+（1.1）iOS原生部分代码
+
+> 只是正常的WKWebView初始化、加载，未做任何特殊处理
+
+```swift
+class ViewController: UIViewController {
+    
+    @IBOutlet weak var webView: WKWebView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loadWebViewUrl()
+    }
+    
+    private func loadWebViewUrl() {
+        let urlString = "https://test.housesigma.com/static/dark_test.html"
+        if let url = URL.init(string: urlString) {
+            let request = URLRequest.init(url: url)
+            webView.load(request)
+        }
+    }
+}
+```
+
+（1.1）测试页面中的部分代码：
+
+> 摘录部分核心代码，并未做任何处理
+
+```css
+@media screen and (prefers-color-scheme: dark) {
+  p {
+    background-color: black;
+    color: grey;
+  }
+  .night{
+    display: unset;
+    color: black;
+  }
+  .day{
+    display:none;
+  }
+}
+```
+
+###### （2）原理及参考文档
+
+（2.1）原理
+
+测试页面默认的是白天主题，
+
+css中的`@media screen and (prefers-color-scheme: dark) { ... }`部分，意为App为dark mode时，该css中的`p`元素改变背景和颜色，相关的`.night`、`.day`class作相应的展示、隐藏，显示dark样式。
+
+（2.2）参考文档
+
+https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
+
+###### （3）已真机调试通过
+
+参考录屏：
+
