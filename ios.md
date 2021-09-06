@@ -94,8 +94,8 @@ https://bugaco.medium.com/%E7%94%A8instruments-leaks%E6%A3%80%E6%B5%8B%E5%86%85%
 1.减少内存泄漏  
 2.不使用过大的图片、图片大小优化  
 
-如果对性能这一块比较看重，我这边还需要重点研究学习
-以及网络上初步搜索，查看到的资料：   https://github.com/skyming/iOS-Performance-Optimization
+如果对性能这一块比较看重，我这边还需要重点研究学习。  
+通过网络上初步搜索，可能要补以下内容，参考：   https://github.com/skyming/iOS-Performance-Optimization
 
 #### 7.1 补充问题：
 - 在使用过我们的app之后，如果让你开始一个项目来改善app的使用体验，你会怎样改？
