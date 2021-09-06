@@ -67,21 +67,15 @@
 - 白天 （不跟随系统设置）
 - 夜间 （不跟随系统设置）
 
-#### 8.1 补充问题：
-- 如果app里面用了webview，如何让 webview 的昼夜状态跟随app的3种状态？
-
-webview测试范例页面（不修改html内容是否可实现？） https://test.housesigma.com/static/dark_test.html
-
-- 答案格式：
-  - 上传代码片段
-  - 解释原理，对应的文档链接
-  - 自己真机调试通过
 
 
+##### 答：
 
-这三种模式，取决于keyWindow的`overrideUserInterfaceStyle`属性。
+> 从代码层来看，白天、夜间模式决定于"Key Window"的`overrideUserInterfaceStyle`属性。
+>
+> 默认为自动，可以手动切换为`.dark`或`.light`。
 
-默认为跟随系统，也可以进行手动切换（参考如下）：
+代码如下：
 
 ```swift
     private var window: UIWindow? {
@@ -146,7 +140,7 @@ class ViewController: UIViewController {
 }
 ```
 
-（1.1）测试页面中的部分代码：
+（1.2）测试页面中的部分代码：
 
 > 摘录部分核心代码，并未做任何处理
 
@@ -172,7 +166,7 @@ class ViewController: UIViewController {
 
 测试页面默认的是白天主题，
 
-css中的`@media screen and (prefers-color-scheme: dark) { ... }`部分，意为App为dark mode时，该css中的`p`元素改变背景和颜色，相关的`.night`、`.day`class作相应的展示、隐藏，显示dark样式。
+css中的`@media screen and (prefers-color-scheme: dark) { ... }`部分，意为检测到App为dark mode时，该css中的`p`元素改变背景和颜色，相关的`.night`、`.day` class作相应的展示、隐藏，显示dark样式。
 
 （2.2）参考文档
 
