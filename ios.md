@@ -3,7 +3,9 @@
 ### 面试问题1~4
 1.关于申请的职位, 有什么疑问需要我们解答?
 
-暂无
+（1）iOS端原生目前用的开发语言是Objectiv-C还是Swift，以及为什么这样选择呢？
+
+（2）有在领英上看到，贵公司的平均在职时间为1.1年，怎么看待这个时间呢？
 
 2.平时使用的开发，调试，协作工具，一般用哪些手机测试。
 
@@ -114,7 +116,7 @@ webview测试范例页面（不修改html内容是否可实现？） https://tes
 
 > 测试页面（ https://test.housesigma.com/static/dark_test.html ），不修改任何内容，即可实现跟随App的主题状态自动切换。
 
-###### （1）代码片段
+**（1）代码片段**
 
 （1.1）iOS原生部分代码
 
@@ -159,8 +161,7 @@ class ViewController: UIViewController {
   }
 }
 ```
-
-###### （2）原理及参考文档
+**（2）原理及参考文档**
 
 （2.1）原理
 
@@ -172,7 +173,7 @@ css中的`@media screen and (prefers-color-scheme: dark) { ... }`部分，意为
 
 https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-color-scheme
 
-###### （3）已真机调试通过
+**（3）已真机调试通过**
 
 参考录屏：
 
